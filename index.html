@@ -1,22 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <!-- REPLACE THIS WITH YOUR PROJECT NAME. EXAMPLE - Category tabs -->
-    <title>Coding Assesment L2 boilerplate</title>
-
+  <meta charset="UTF-8">
+  <title>Product Page with Counter</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-
 <body>
-    <!-- Your code goes here -->
-    <div class="container">
-        <a href="https://github.com/mmdmrishabh/Coding-assessment-l2-Boilerplate-code/blob/main/Readme.md" target="_blank">Read how to work with boilerplate</a>
-    </div>
-    <!-- Happy coding 😊 -->
-    <script src="./script.js"></script>
-</body>
+  <div class="ProductMain">
+    <section class="product">
+      <div class="product__photo">
+        <div class="photo-container">
+          <div class="photo-main">
+            <img id="main-photo" src="" alt="Main Product picture">
+          </div>
+          <div class="photo-album">
+            <ul id="photo-list">
+              <!-- Photos will be dynamically added here -->
+            </ul>
+          </div>
+        </div>
+      </div>
 
+      <div class="product_info">
+        <div class="title">
+          <span id="vendor-name"></span>
+          <h1 id="product-title"></h1>
+        </div>
+
+        <div class="price">
+          <div>
+            <span id="product-price"></span>
+            <span id="percentage-off"></span>
+          </div>
+          <span id="compare-price"></span>
+        </div>
+
+        <div class="variant">
+          <h3>Choose a color</h3>
+          <ul id="color-options">
+            <!-- Color options will be dynamically added here -->
+          </ul>
+        </div>
+
+        <div className="size">
+          <h3>Choose a size</h3>
+          <ul id="size-options">
+            <!-- Size options will be dynamically added here -->
+          </ul>
+        </div>
+
+        <div className="ButtonSection">
+          <div className="ButtonContainer">
+            <div className="btn-group">
+              <button id="increment-btn">+</button>
+              <p className="counterValue" id="counter-value">1</p>
+              <button id="decrement-btn">-</button>
+            </div>
+            <div>
+              <button className="buy--btn" id="add-to-cart-btn">
+                ADD TO CART
+              </button>
+            </div>
+          </div>
+
+          <h3 id="cart-ad" className="cartAd" style="display: none;"></h3>
+        </div>
+
+        <div className="description" id="product-description"></div>
+      </div>
+    </section>
+  </div>
+</body>
 </html>
