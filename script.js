@@ -15,7 +15,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     const counterValueElement = document.getElementById("counter-value");
     const cartAdElement = document.getElementById("cart-ad");
     const addToCartBtn = document.getElementById("add-to-cart-btn");
-  
+    const productDescriptionElement = document.getElementById("product-description");
+
     // Counter logic
     let count = 1;
     const incrementBtn = document.getElementById("increment-btn");
@@ -97,6 +98,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   
         sizeOptionsElement.appendChild(listItem);
       });
+
+      productDescriptionElement.innerHTML = product.description;;
     };
   
     fetchProductData();
